@@ -1,0 +1,129 @@
+<!-- <div style="background-color: darkkhaki;">
+  <div class="container" >
+    <div class="row">
+    <div class="card" *ngFor="let data of productt">
+      <div>
+      <div class="content" >
+        <div class="header">
+          <h2 class="modal-title" id="exampleModalLabel">{{data.title}}</h2>
+        </div>
+        <div class="body">
+          <div class="image">
+            <img src="{{data.image}}">
+            <span class="input">
+              <label for="Quantity"><strong>Quantity:-</strong> </label>
+            <input type="number">
+          </span>
+          </div>
+          <div class="price"><strong >{{data.price | currency:'INR'}}</strong></div>
+          <div class="btn">
+            <button type="button" class=" btn-secondary" (click)="remove(data)">Remove to cart</button>&nbsp;
+            <button type="button" class=" btn-primary">Place Order</button>
+          </div>
+          <div>
+          {{data.description}}
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div> -->
+
+<!-- <div class="row">
+    <div class="col-8">col-8</div>
+    <div class="col-4">col-4</div>
+  </div> -->
+
+<!-- sura full mat cart -->
+<div *ngIf="productt.length!=0">
+  <div class="cart-head" style="margin-bottom: 10px;">
+    <mat-card>
+      <mat-card-content class="carthed">Cart Products</mat-card-content>
+    </mat-card>
+  </div>
+  <div class="fullcart-d" *ngIf="productt.length!=0">
+    <mat-card class="cartfull-1">
+      <div class="main" *ngFor="let pro of productt">
+        <div class="c-div">
+          <div class="c-img">
+            <img src="{{pro.image}}" alt="" height="100px" width="100px">
+            <h1>₹{{pro.price}}</h1>
+
+          </div>
+          <div class="c-details">
+            <h3>{{pro.title}}</h3>
+            <h5>{{pro.description}}</h5>
+          </div>
+        </div>
+        <div class="c-rem-btn">
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus bg-danger" (click)="minus(pro)" *ngIf="pro.quantity>1 ">
+            <input type="number" step="1" min="1" max="" name="quantity" value="{{pro.quantity}}" title="Qty" class="input-text qty text bg-light" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus bg-success" (click)="plus(pro)" >
+          </div>
+          <a >SAVE FOR LATER</a>
+          <a (click)="remove(pro)">REMOVE</a>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="cbtn"  *ngFor="let pro of productt">
+      <div>
+        <button  (click)="place()"><span>PLACE ORDER</span></button>
+      </div>
+
+    </mat-card>
+
+
+    <!-- price details -->
+    <mat-card class="price-details">
+      <span>PRICE DETAILS</span>
+      <div class="p-div">
+        <div class="p-con">
+          <h5>price(item)</h5>
+          <div class="pri">
+          <h5 style="max-width: 3;">₹{{price | number:'4.2'}}</h5>
+        </div>
+        </div>
+        <div class="p-con">
+          <h5>Discount</h5>
+          <h5>₹0.00</h5>
+        </div>
+        <div class="p-con">
+          <h5>Delivery Charges</h5>
+          <h5>Free Delivery</h5>
+        </div>
+      </div>
+      <div class="p-amount">
+        <h3>Total Amount</h3>
+        <h3>₹{{price | number:'4.1-5'}}</h3>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+<!-- for empty cart -->
+<div class="container-fluid  mt-100" *ngIf="productt.length==0">
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <div class="card">
+        <!-- <div class="card-header">
+     <h5>Cart</h5>
+     </div> -->
+        <div class="card-body cart">
+          <div class="col-sm-12 empty-cart-cls text-center">
+            <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+            <h3><strong>Your Cart is Empty</strong></h3>
+            <h4>Add something to make me happy :)</h4>
+            <a href="#" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

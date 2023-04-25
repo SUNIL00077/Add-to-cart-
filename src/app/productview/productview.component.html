@@ -1,0 +1,25 @@
+<!-- Modal -->
+<div class="main">
+<mat-dialog-content class="mat-typography">
+<div class="modal-dialog" role="document">
+
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">{{data.title}}</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="{{data.image}}">
+        </div>
+        <div class="price"><strong >{{data.price | currency:'INR'}}</strong></div>
+
+        {{data.description}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" mat-dialog-close>Close</button>
+        <button type="button" class="btn btn-primary" routerLink="cart" (click)="addcart(data)">Buy now</button>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+</div>

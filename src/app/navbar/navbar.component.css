@@ -1,0 +1,23 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  /* .abc
+{
+ z-index: 1;
+} */
+
+button:hover
+{
+  background-color:cornsilk;
+  color: black;
+}
+.abc{
+background-color:#2874f0;
+}
+input{
+  margin-left: 30px;
+}
+img{
+  margin-left: 100px;
+}

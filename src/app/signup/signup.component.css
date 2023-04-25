@@ -1,0 +1,26 @@
+.btn
+{
+  width: 90%;
+  margin-left: 28px;
+  margin-top: -20px;
+}
+.form-group{
+  width: 90%;
+  margin: 27px;
+}
+.link{
+  text-align: center;
+  margin: 22px;
+}
+.rounded{
+  margin-top: 25px;
+}
+.text-center
+{
+  margin-top: 15px;
+}
+.bg{
+  background-image: url('https://www.shutterstock.com/image-vector/abstract-background-design-website-landing-260nw-1750085066.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+
+  <mat-toolbar class="abc">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"> -->
+      <!-- <mat-icon>menu</mat-icon> -->
+      <img routerLink="product" src="https://couponcode-images.s3-ap-southeast-1.amazonaws.com/public/shop/240.jpg" style="height: 62px;">
+    <!-- </button> -->
+    <span></span>
+      <input  class="form-control mr-sm-2"style="width: 40%;"type="text" (keyup)="search($event)" placeholder="Search">
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" routerLink="product"><mat-icon>home</mat-icon>Home</button>
+    &nbsp;<button mat-raised-button color="accent" routerLink="login"><mat-icon>login</mat-icon>Login</button>&nbsp;
+    <button mat-raised-button  matBadge="{{cartItem}}" matBadgePosition="after" matBadgeColor="warn" color="accent" routerLink="cart"><mat-icon>shopping_cart</mat-icon>Cart</button>
+  </mat-toolbar>
+  </div>
+</div>
+<router-outlet></router-outlet>
